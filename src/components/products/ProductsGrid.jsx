@@ -12,7 +12,7 @@ const ProductsGrid = ({ data }) => {
       <CardGroup>
         <Row xs={2} md={4} lg={5}>
           {data.map((data, k) => (
-            <Col key={k}>
+            <Col key={k} className="m-2">
               <ProductCard data={data} />
             </Col>
           ))}

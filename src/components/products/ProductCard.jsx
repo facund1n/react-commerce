@@ -3,11 +3,13 @@ import Card from "react-bootstrap/Card";
 
 const ProductCard = ({ data }) => {
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={data.image} />
+    <Card style={{ height: "100%" }}>
+      <Card.Img variant="top" src={data.image} style={{ height: "200px" }} />
       <Card.Body>
         <Card.Title>{data.title}</Card.Title>
-        <Card.Text>{data.description}</Card.Text>
+        <Card.Text style={{ textOverflow: "ellipsis" }}>
+          {data.description}
+        </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
